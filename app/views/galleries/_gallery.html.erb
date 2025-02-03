@@ -1,0 +1,20 @@
+<div id="<%= dom_id gallery %>">
+  <p>
+    <strong>Name:</strong>
+    <%= gallery.name %>
+  </p>
+
+  <p>
+    <strong>images:</strong>
+    <% gallery.images.each do |photo| %>
+      <div class="max-w-7xl mx-auto px-4 py-8">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          <div class="relative">
+            <%= image_tag photo.url, class: "w-full h-64 object-cover rounded-lg shadow-md"%>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </p>
+
+</div>
