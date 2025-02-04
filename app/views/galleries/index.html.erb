@@ -1,16 +1,19 @@
-<p style="color: green"><%= notice %></p>
+<div class="m-10">
+  <p style="color: green"><%= notice %></p>
+  
+  <% content_for :title, "Galleries" %>
 
-<% content_for :title, "Galleries" %>
+  <h1>Galleries</h1>
 
-<h1>Galleries</h1>
-
-<div id="galleries">
-  <% @galleries.each do |gallery| %>
-    <%= render gallery %>
-    <p>
+  <div id="galleries">
+    <% @galleries.each do |gallery| %>
+      <%= render gallery %>
+      <p>
       <%= link_to "Show this gallery", gallery %>
-    </p>
-  <% end %>
+      </p>
+      <% end %>
+  </div>
+  
+  <%= link_to "New gallery for Satvic", new_gallery_path, class: "bg-red-500 text-white p-4 text-center" %>
+  
 </div>
-
-<%= link_to "New gallery", new_gallery_path %>

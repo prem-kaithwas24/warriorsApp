@@ -22,9 +22,14 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body class="bg-gray-100 text-gray-900">
-    <main class="container mx-auto mt-28 px-5 flex">
+  <body>
+    <nav>
+      <ul> 
+        <li><%= link_to "Home", root_path %></li>
+        <li><%= link_to "Galleries", galleries_path %></li>
+        <li><%= link_to "New gallery", new_gallery_path %></li>
+      </ul>
+    </nav>
       <%= yield %>
-    </main>
   </body>
 </html>
